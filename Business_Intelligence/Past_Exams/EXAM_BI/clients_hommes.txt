@@ -1,0 +1,23 @@
+NomClient,CodeClient,Pays,Region,Ville
+Aaron Carbonneau,C1,France,Île-de-France,Paris
+Leila Quint,C2,France,Auvergne-Rhône-Alpes,Lyon
+Sara De Villiers,C3,Spain,Catalonia,Barcelona
+Agnès Maret,C4,France,Provence-Alpes-Côte d'Azur,Marseille
+Ameline Verninac,C5,France,Provence-Alpes-Côte d'Azur,Nice
+Léo Reverdin,C6,France,Provence-Alpes-Côte d'Azur,Marseille
+Thibaud Arceneaux,C7,Spain,Catalonia,Barcelona
+Jean-Michel Manoury,C8,France,Provence-Alpes-Côte d'Azur,Nice
+Wilfrid Gérald,C9,Spain,Catalonia,Barcelona
+Gautier Ballesdens,C10,France,Île-de-France,Paris
+Bruno Boutin,C11,France,Provence-Alpes-Côte d'Azur,Marseille
+Djeferson Brasseur,C12,Spain,Catalonia,Barcelona
+Adrien Charpentier,C13,France,Provence-Alpes-Côte d'Azur,Marseille
+Jean-Claude Beaufils,C14,France,Provence-Alpes-Côte d'Azur,Nice
+Frédéric Cerfbeer,C15,France,Provence-Alpes-Côte d'Azur,Nice
+Thibaud Dutertre,C16,France,Île-de-France,Paris
+Michel Mallette,C17,Spain,Catalonia,Barcelona
+Thibault Robillard,C18,France,Île-de-France,Paris
+Jean-Charles Dufour,C19,France,Provence-Alpes-Côte d'Azur,Nice
+Maximilien Beaugendre,C20,France,Île-de-France,Paris
+Bastien Auguste,C21,Spain,Catalonia,Barcelona
+Arthur Duchamp,C22,France,Île-de-France,Paris

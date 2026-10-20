@@ -1,0 +1,10 @@
+﻿pizza_type_id,name,category
+five_cheese,The Five Cheese Pizza,Veggie
+four_cheese,The Four Cheese Pizza,Veggie
+green_garden,The Green Garden Pizza,Veggie
+ital_veggie,The Italian Vegetables Pizza,Veggie
+mediterraneo,The Mediterranean Pizza,Veggie
+mexicana,The Mexicana Pizza,Veggie
+spin_pesto,The Spinach Pesto Pizza,Veggie
+spinach_fet,The Spinach and Feta Pizza,Veggie
+veggie_veg,The Vegetables Pizza,Veggie

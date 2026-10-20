@@ -1,0 +1,399 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="a8eaa27f-daf0-42d4-9b42-d8f858516ce1" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Dim Dossier Perso</ID>
+  <Name>Dim Dossier Perso</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="4" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-3229" scrolltop="-1678" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="9970" y="11896" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="010000009001b0300100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DimDossierPerso" left="20" top="4347" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3027" height="3747" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000d30b0000a30e0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DimDossierPerso" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DimGeo" left="33" top="0" logicalid="2" controlid="2" masterid="0" hint1="0" hint2="0" width="3000" height="1947" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000b80b00009b070000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DimGeo" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="1134" top="1448" logicalid="3" controlid="3" masterid="0" hint1="0" hint2="0" width="799" height="3199" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_DossierPerso$_Geo$]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="1" sourceattachpoint="5" destattachpoint="4" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="1533" y="1947" />
+              <point x="1533" y="4347" />
+            </connector>
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-3229</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-1678</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ARDiagramLayout</Name>
+      <Value>
+        <DiagramLayout ZoomPercent="100" ViewPortX="0" ViewPortY="0" xmlns="">
+          <Shapes NodeWidth="138">
+            <Shape Id="PK Dossier" Expanded="false">
+              <Attributes>
+                <Attribute Id="PK Dossier" />
+                <Attribute Id="Code Pays" />
+                <Attribute Id="Date De Ness" />
+                <Attribute Id="ID Pays" />
+                <Attribute Id="Matricule" />
+                <Attribute Id="Pays 1" />
+                <Attribute Id="Sex" />
+                <Attribute Id="Ville" />
+              </Attributes>
+              <Position x="20" y="20" />
+            </Shape>
+            <Shape Id="Prenom" Expanded="false">
+              <Attributes>
+                <Attribute Id="Prenom" />
+              </Attributes>
+              <Position x="197" y="20" />
+            </Shape>
+            <Shape Id="Nom" Expanded="false">
+              <Attributes>
+                <Attribute Id="Nom" />
+              </Attributes>
+              <Position x="375" y="20" />
+            </Shape>
+            <Shape Id="Pays" Expanded="false">
+              <Attributes>
+                <Attribute Id="Pays" />
+              </Attributes>
+              <Position x="552" y="20" />
+            </Shape>
+          </Shapes>
+        </DiagramLayout>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="e50151da-a403-476b-9ad1-262562eef08b">
+    <DataSourceViewID>RH</DataSourceViewID>
+  </Source>
+  <UnknownMember>Visible</UnknownMember>
+  <ErrorConfiguration dwd:design-time-name="bacf27f8-34bb-4da4-b701-edc9d0e8beb3">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="969cf97a-58ce-49c5-bde2-dc5e4251aae9">
+      <ID>PK Dossier</ID>
+      <Name>PK Dossier</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="92fdd54f-157e-4e79-87d5-6220fafcf160">
+          <DataType>Double</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="2c6999cf-9b7f-4584-a100-dd3b54cd9e90">
+            <TableID>dbo_DimDossierPerso</TableID>
+            <ColumnID>PK_x0020_dossier_x0020_</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="1265c16e-8294-4e69-9c84-94579249e48c">
+          <AttributeID>ID Pays</AttributeID>
+          <Name>ID Pays</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="971409ac-afa1-4e15-ae4d-e42623706b3f">
+          <AttributeID>Matricule</AttributeID>
+          <Name>Matricule</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="e106b252-29c2-4190-80cc-63eed7698956">
+          <AttributeID>Sex</AttributeID>
+          <Name>Sex</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="44694507-d110-4d3d-898c-19b94835b4a3">
+          <AttributeID>Date De Ness</AttributeID>
+          <Name>Date De Ness</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="ca1dddfd-7f63-4f72-a36c-fb54a190869d">
+          <AttributeID>Ville</AttributeID>
+          <Name>Ville</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="2a344b5b-7f2b-4ae5-83e6-a3898920e77a">
+          <AttributeID>Code Pays</AttributeID>
+          <Name>Code Pays</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="161001ce-5056-4b1e-a277-f3611f646faf">
+          <AttributeID>Pays 1</AttributeID>
+          <Name>Pays 1</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="cea0a217-2b0d-4915-8ff1-7276020bde13">
+          <AttributeID>Prenom</AttributeID>
+          <Name>Prenom</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="abd53aca-d085-4eb8-a70f-b9d4601edb8f">
+      <ID>ID Pays</ID>
+      <Name>ID Pays</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="2894501a-9f54-49e3-bb47-42ee43dc7bc2">
+          <DataType>Integer</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="28b34858-b769-4cbc-a982-458b27b02b3d">
+            <TableID>dbo_DimGeo</TableID>
+            <ColumnID>ID_pays</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="3706856b-f3c9-48d8-a421-a78a650c3cde">
+      <ID>Matricule</ID>
+      <Name>Matricule</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="62e4b165-f7b1-47f5-baa0-6b472b30d1e8">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="c2aac054-1a6e-4d04-b0cc-8e97466e3b05">
+            <TableID>dbo_DimDossierPerso</TableID>
+            <ColumnID>Matricule</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="d157c480-dca6-4fad-951c-dc05afa913ed">
+      <ID>Nom</ID>
+      <Name>Nom</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="40b05418-6ff1-42e0-a70b-01bc37bd8d19">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e69595fc-b959-44bf-a630-386356febd0d">
+            <TableID>dbo_DimDossierPerso</TableID>
+            <ColumnID>Nom</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="dbb2e682-8223-4650-a6b4-3130ea30d477">
+          <AttributeID>Pays</AttributeID>
+          <Name>Pays</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="3697f70e-7e5d-451a-b3bb-41272126fd10">
+      <ID>Prenom</ID>
+      <Name>Prenom</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="bc4c2d73-1e0c-46c9-b698-613eca40c9ce">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b5357643-94cd-4d5d-a5d0-e1d0b30944de">
+            <TableID>dbo_DimDossierPerso</TableID>
+            <ColumnID>Prenom</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="748fcc4f-5d0e-4673-998e-09fe8d5f120a">
+          <AttributeID>Nom</AttributeID>
+          <Name>Nom</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="5d009752-fac0-4e89-8826-5ba1ed17ab0b">
+      <ID>Sex</ID>
+      <Name>Sex</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e764dde6-a9f2-4bb3-bb0d-31fc71c0499d">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="8c00f4bc-10a2-45ea-9a16-719f4451a6fe">
+            <TableID>dbo_DimDossierPerso</TableID>
+            <ColumnID>Sex</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="faf9cd5a-9fc8-4a64-b401-2e28feb090b2">
+      <ID>Date De Ness</ID>
+      <Name>Date De Ness</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="6c67e10e-f578-4ddb-bf1f-68598967ea21">
+          <DataType>Date</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="94c0d8b2-ecaa-482b-a1c5-c7a4be8808a8">
+            <TableID>dbo_DimDossierPerso</TableID>
+            <ColumnID>Date_de_ness</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="037ef517-1eed-4725-a85e-a261825d37f7">
+      <ID>Pays</ID>
+      <Name>Pays</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="615966c0-3f6f-4c8d-9025-5149935e4d64">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="cd439e16-8b9b-4b70-b910-4bb58d34896f">
+            <TableID>dbo_DimDossierPerso</TableID>
+            <ColumnID>Pays</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="5d1c9aab-d20f-48d4-b7f1-ce3279acb45c">
+      <ID>Ville</ID>
+      <Name>Ville</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="31283d88-bcaa-492a-b109-92bcfd07f671">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="99f1773a-906c-4394-8051-169362b1b254">
+            <TableID>dbo_DimDossierPerso</TableID>
+            <ColumnID>Ville</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="e66dcc06-e01c-4f42-b560-2f96b3130416">
+      <ID>Code Pays</ID>
+      <Name>Code Pays</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="68ce2e01-33e1-4162-a273-e02a0f2788a2">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d467761a-eb9d-4d57-8a08-6bae30ebebcc">
+            <TableID>dbo_DimGeo</TableID>
+            <ColumnID>CodePays</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="7f5ced63-a881-4682-80c8-aa3c5be6422f">
+      <ID>Pays 1</ID>
+      <Name>Pays 1</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="352e9845-2a6f-4201-bb98-d30d13a99493">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="1381be95-5f99-40bc-8514-cc0535d7d3d3">
+            <TableID>dbo_DimGeo</TableID>
+            <ColumnID>Pays</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <Hierarchies>
+    <Hierarchy dwd:design-time-name="dec5b8b6-9bca-420e-9726-ed9a94c5d4f1">
+      <ID>Hierarchy</ID>
+      <Name>Hierarchy</Name>
+      <Levels>
+        <Level dwd:design-time-name="69facd79-2b18-46d7-b692-1ca3f64f3c1a">
+          <ID>Pays</ID>
+          <Name>Pays</Name>
+          <SourceAttributeID>Pays</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="0fa2efd2-e16a-4a06-bb2e-b3b644bf0638">
+          <ID>Nom</ID>
+          <Name>Nom</Name>
+          <SourceAttributeID>Nom</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="f866ef5e-ec05-4892-93b7-a37b6147f364">
+          <ID>Prenom</ID>
+          <Name>Prenom</Name>
+          <SourceAttributeID>Prenom</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

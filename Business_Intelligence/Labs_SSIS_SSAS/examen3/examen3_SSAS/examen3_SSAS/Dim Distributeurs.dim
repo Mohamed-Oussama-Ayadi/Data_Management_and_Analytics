@@ -1,0 +1,182 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="1541723d-6dc0-4dbc-af3d-8fd29add19db" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Dim Distributeurs</ID>
+  <Name>Dim Distributeurs</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2266" scrolltop="-4615" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="8170" y="11896" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="010000009001b0300100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DimDistributeurs" left="20" top="0" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3598" height="2667" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000800000e0e00006b0a0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DimDistributeurs" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-2266</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-4615</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="650e3e6e-7c06-4448-86a8-c2a21c81d94f">
+    <DataSourceViewID>EXAM 3ALINFO6</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="ad7180c3-0150-4f89-a710-5ba54431bc46">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="55cfed30-c94c-4ece-a229-dc78c105f607">
+      <ID>ID DIST</ID>
+      <Name>ID DIST</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c68cc434-6c7d-4299-ab8d-65c04c03e5a4">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="0c547288-4956-4bbb-ac23-b754d41bb2ca">
+            <TableID>dbo_DimDistributeurs</TableID>
+            <ColumnID>ID_DIST</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="b3766c33-6cd6-453a-ba7a-90ca32bde41e">
+          <AttributeID>CODE DIST</AttributeID>
+          <Name>CODE DIST</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="a23287eb-b196-4d41-ba41-7b7a13ace7a4">
+          <AttributeID>CATEGORIE DIST</AttributeID>
+          <Name>CATEGORIE DIST</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="04b17c69-6a58-4f74-85e4-900354537501">
+          <AttributeID>VILLE DIST</AttributeID>
+          <Name>VILLE DIST</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="ec773d06-1df2-4bf6-bcf3-6afcc86fac5b">
+          <AttributeID>TYPE ETAB DIST</AttributeID>
+          <Name>TYPE ETAB DIST</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="3186f3b4-2b00-4b3d-99e2-4f7ed0c08628">
+      <ID>CODE DIST</ID>
+      <Name>CODE DIST</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e668a499-1efc-45ad-bf1b-fe345aea3957">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a8ec4a13-667b-4197-af81-4accd5ab97b2">
+            <TableID>dbo_DimDistributeurs</TableID>
+            <ColumnID>CODE_DIST</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="4680cbc1-1ab8-45d9-8e53-06f3de37d458">
+      <ID>CATEGORIE DIST</ID>
+      <Name>CATEGORIE DIST</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e3b74bff-9c13-442d-9b13-9b7666335eae">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="69ef3642-1c4b-41fb-bc13-7d10a8fbe724">
+            <TableID>dbo_DimDistributeurs</TableID>
+            <ColumnID>CATEGORIE_DIST</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="e1d67a48-fac9-4796-8f00-af856a80fdf3">
+      <ID>VILLE DIST</ID>
+      <Name>VILLE DIST</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="8a468a1e-9d20-4cf8-8a6a-7e29fca38624">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="c6fcfc2d-b71a-4c00-bfe1-32074dce3b87">
+            <TableID>dbo_DimDistributeurs</TableID>
+            <ColumnID>VILLE_DIST</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="35cc877c-d271-48bf-af11-3f0a20ae04b8">
+      <ID>TYPE ETAB DIST</ID>
+      <Name>TYPE ETAB DIST</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="b67ae7e4-5152-461d-b6d8-2c4190af4529">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d958a2f1-4f8f-4760-b8a1-9c8aa681a790">
+            <TableID>dbo_DimDistributeurs</TableID>
+            <ColumnID>TYPE_ETAB_DIST</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

@@ -1,0 +1,18 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "Sinistres_SSAS", "Sinistres_SSAS\Sinistres_SSAS.dwproj", "{81A1CB9C-7585-409E-BEAA-A7A9446F2463}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{81A1CB9C-7585-409E-BEAA-A7A9446F2463}.Development|Default.ActiveCfg = Development
+		{81A1CB9C-7585-409E-BEAA-A7A9446F2463}.Development|Default.Build.0 = Development
+		{81A1CB9C-7585-409E-BEAA-A7A9446F2463}.Development|Default.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

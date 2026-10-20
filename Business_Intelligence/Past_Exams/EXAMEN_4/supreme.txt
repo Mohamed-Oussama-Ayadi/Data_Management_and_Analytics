@@ -1,0 +1,10 @@
+﻿pizza_type_id,name,category
+brie_carre,The Brie Carre Pizza,Supreme
+calabrese,The Calabrese Pizza,Supreme
+ital_supr,The Italian Supreme Pizza,Supreme
+peppr_salami,The Pepper Salami Pizza,Supreme
+prsc_argla,The Prosciutto and Arugula Pizza,Supreme
+sicilian,The Sicilian Pizza,Supreme
+soppressata,The Soppressata Pizza,Supreme
+spicy_ital,The Spicy Italian Pizza,Supreme
+spinach_supr,The Spinach Supreme Pizza,Supreme

@@ -1,0 +1,419 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="fe84027b-be91-4a99-bc60-672094fecb3c" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Dim Contrats</ID>
+  <Name>Dim Contrats</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="4" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2319" scrolltop="-1721" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="8170" y="11896" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="010000009001b0300100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DimClients" left="266" top="5427" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3000" height="3027" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000b80b0000d30b0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DimClients" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DimContrats" left="20" top="0" logicalid="2" controlid="2" masterid="0" hint1="0" hint2="0" width="3493" height="3027" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000a50d0000d30b0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DimContrats" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="1367" top="2727" logicalid="3" controlid="3" masterid="0" hint1="0" hint2="0" width="799" height="3200" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_DimClients_Contrats]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="2" sourceattachpoint="4" destattachpoint="5" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="1766" y="5427" />
+              <point x="1766" y="3027" />
+            </connector>
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-2319</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-1721</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ARDiagramLayout</Name>
+      <Value>
+        <DiagramLayout ZoomPercent="100" ViewPortX="0" ViewPortY="0" xmlns="">
+          <Shapes NodeWidth="178">
+            <Shape Id="PK DIM Contrat" Expanded="false">
+              <Attributes>
+                <Attribute Id="PK DIM Contrat" />
+                <Attribute Id="Code Client" />
+                <Attribute Id="Code Contrat" />
+                <Attribute Id="Date Debut Contrat" />
+                <Attribute Id="Date Fin Contrat" />
+                <Attribute Id="ID Client" />
+                <Attribute Id="Nom Client" />
+                <Attribute Id="PK DIM Client" />
+                <Attribute Id="Type Contrat" />
+              </Attributes>
+              <Position x="20" y="20" />
+            </Shape>
+            <Shape Id="Ville" Expanded="false">
+              <Attributes>
+                <Attribute Id="Ville" />
+              </Attributes>
+              <Position x="247" y="20" />
+            </Shape>
+            <Shape Id="Region" Expanded="false">
+              <Attributes>
+                <Attribute Id="Region" />
+              </Attributes>
+              <Position x="475" y="20" />
+            </Shape>
+            <Shape Id="Pays" Expanded="false">
+              <Attributes>
+                <Attribute Id="Pays" />
+              </Attributes>
+              <Position x="702" y="20" />
+            </Shape>
+          </Shapes>
+        </DiagramLayout>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="8f202571-24b8-47a1-9edf-9aa851a79f66">
+    <DataSourceViewID>EXAMBISP24</DataSourceViewID>
+  </Source>
+  <UnknownMember>Visible</UnknownMember>
+  <ErrorConfiguration dwd:design-time-name="a0f15d0b-720b-4697-89f1-1ac9b2af95e6">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="8c786f4b-625a-446d-ac54-5bb1aa1cd22c">
+      <ID>PK DIM Contrat</ID>
+      <Name>PK DIM Contrat</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="187a0339-c53c-4137-84a5-5f636a0dd26e">
+          <DataType>Integer</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="dbf07b14-6e27-43fe-820c-bc89fa19a584">
+            <TableID>dbo_DimContrats</TableID>
+            <ColumnID>PK_DIMContrat</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="0d629604-1d5a-4741-861b-c8e9bd0388a5">
+          <AttributeID>PK DIM Client</AttributeID>
+          <Name>PK DIM Client</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="912a0bb2-4b38-4c58-83d9-afcc1fe833b7">
+          <AttributeID>Code Contrat</AttributeID>
+          <Name>Code Contrat</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="243ab47d-051a-4ad2-8e0d-d43b9d90db2a">
+          <AttributeID>Type Contrat</AttributeID>
+          <Name>Type Contrat</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="57921ef3-61e6-435c-a19e-fdbc903c952d">
+          <AttributeID>Date Debut Contrat</AttributeID>
+          <Name>Date Debut Contrat</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="7c397d9b-fc79-4cb5-a8ac-17f72bb3c9bb">
+          <AttributeID>Date Fin Contrat</AttributeID>
+          <Name>Date Fin Contrat</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="ba3d2f44-ca4b-4067-8d0c-e3fe46ea6351">
+          <AttributeID>ID Client</AttributeID>
+          <Name>ID Client</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="d2a8a5d1-9450-40db-93b7-92092e426458">
+          <AttributeID>Code Client</AttributeID>
+          <Name>Code Client</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="b2e958fe-27d3-4560-9636-d256a7179941">
+          <AttributeID>Nom Client</AttributeID>
+          <Name>Nom Client</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="d2f36092-8f61-41df-a4f7-451ccf024da5">
+          <AttributeID>Ville</AttributeID>
+          <Name>Ville</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="9f0f9134-1127-425d-9e46-664f39a6b26c">
+      <ID>PK DIM Client</ID>
+      <Name>PK DIM Client</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="4bfd5d60-8410-42ab-88a5-76a2cf9d0491">
+          <DataType>Integer</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="92765001-4dc2-432c-bef7-40a6f79e2b3e">
+            <TableID>dbo_DimClients</TableID>
+            <ColumnID>PK_DIMClient</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="c10c4ab9-ca73-4ee8-8ad5-27293b0be2e8">
+      <ID>Code Contrat</ID>
+      <Name>Code Contrat</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e16079c9-6fe1-4285-9b41-fc0ae2593783">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="fdc4e60e-438e-4cd4-b8e5-d62dc832f144">
+            <TableID>dbo_DimContrats</TableID>
+            <ColumnID>CodeContrat</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="0126cf64-d421-4c1d-9da4-47f3e39ba3c4">
+      <ID>Type Contrat</ID>
+      <Name>Type Contrat</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e50723d3-e24a-40c8-9f0d-a3cc7433d90b">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="67aa2d5d-cc7c-4ce4-a4cb-7c8e0f5a06db">
+            <TableID>dbo_DimContrats</TableID>
+            <ColumnID>TypeContrat</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="98ebb013-89c6-4703-906f-48aed2d5d191">
+      <ID>Date Debut Contrat</ID>
+      <Name>Date Debut Contrat</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="4abdce5c-f979-417b-b2df-c4e28b5c9c21">
+          <DataType>Date</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b1605707-c77d-4d18-ba6d-9188eaebca9f">
+            <TableID>dbo_DimContrats</TableID>
+            <ColumnID>DateDebutContrat</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="718ff656-cae4-4eb3-a3fa-69b6af162ea6">
+      <ID>Date Fin Contrat</ID>
+      <Name>Date Fin Contrat</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="537dfea1-1606-4583-99e6-b3f498eebbcd">
+          <DataType>Date</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="40b3eb98-36b5-4291-8eee-68bb240a87c2">
+            <TableID>dbo_DimContrats</TableID>
+            <ColumnID>DateFinContrat</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="60a04ec6-e4b3-4368-8365-43de345b9ce8">
+      <ID>ID Client</ID>
+      <Name>ID Client</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="4c93570d-8837-44b8-ab40-94a55e6ba268">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="ff4ffbb5-e4e8-41df-b850-e5d0663a34d3">
+            <TableID>dbo_DimContrats</TableID>
+            <ColumnID>IDClient</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="41418df2-970f-4eea-b39a-9712a505483b">
+      <ID>Code Client</ID>
+      <Name>Code Client</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="a30f35cf-c054-44f5-bfad-bde9fa64283b">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f147d441-2e44-4113-90f1-e1b27c27e558">
+            <TableID>dbo_DimClients</TableID>
+            <ColumnID>CodeClient</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="ed781bf6-6040-4668-8328-cf727bd5809e">
+      <ID>Nom Client</ID>
+      <Name>Nom Client</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="4127f18a-5313-46bc-aaac-08cd9a146b00">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="3956ceea-cb09-4ee1-9bad-b58d1cb0847b">
+            <TableID>dbo_DimClients</TableID>
+            <ColumnID>NomClient</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="e5721ca4-5164-4f01-ba7c-22d788e3d623">
+      <ID>Pays</ID>
+      <Name>Pays</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="49ad0903-19dc-4790-9ba5-2267adac5338">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="86391de8-1217-4d40-8143-e647ba8ebd31">
+            <TableID>dbo_DimClients</TableID>
+            <ColumnID>Pays</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="2d0a2c62-b089-4c5f-91cb-74a12e15db05">
+      <ID>Region</ID>
+      <Name>Region</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c2072535-8c87-47ae-9d9b-b90aa6d3f311">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e7fe898f-5361-4892-8888-a0f0522aa0a1">
+            <TableID>dbo_DimClients</TableID>
+            <ColumnID>Region</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="59408685-5a26-4d34-9cbb-18dc70aa5374">
+          <AttributeID>Pays</AttributeID>
+          <Name>Pays</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="97a1ca20-c304-4f69-87da-e562cab10a40">
+      <ID>Ville</ID>
+      <Name>Ville</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="bff17d43-75af-4aa2-b422-fe8cc977b5d9">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a70a0fe1-edbb-4937-9199-fcfdbc2b61d9">
+            <TableID>dbo_DimClients</TableID>
+            <ColumnID>Ville</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="9bfd36a3-3e06-479e-8f11-dd307da644b0">
+          <AttributeID>Region</AttributeID>
+          <Name>Region</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <Hierarchies>
+    <Hierarchy dwd:design-time-name="dcdf6631-a98f-4694-be95-a6c42c698318">
+      <ID>Hierarchy</ID>
+      <Name>Hierarchy</Name>
+      <Levels>
+        <Level dwd:design-time-name="5db4d69b-8f34-4281-aa04-cf90e0a85def">
+          <ID>Pays</ID>
+          <Name>Pays</Name>
+          <SourceAttributeID>Pays</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="789ac7aa-aa36-4575-b4ec-a6207c618235">
+          <ID>Region</ID>
+          <Name>Region</Name>
+          <SourceAttributeID>Region</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="3bf9222d-d145-4124-a2b9-64485883440d">
+          <ID>Ville</ID>
+          <Name>Ville</Name>
+          <SourceAttributeID>Ville</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

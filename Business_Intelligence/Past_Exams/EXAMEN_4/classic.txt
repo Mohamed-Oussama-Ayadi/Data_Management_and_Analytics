@@ -1,0 +1,9 @@
+﻿pizza_type_id,name,category
+big_meat,The Big Meat Pizza,Classic
+classic_dlx,The Classic Deluxe Pizza,Classic
+hawaiian,The Hawaiian Pizza,Classic
+ital_cpcllo,The Italian Capocollo Pizza,Classic
+napolitana,The Napolitana Pizza,Classic
+pep_msh_pep,The Pepperoni- Mushroom- and Peppers Pizza,Classic
+pepperoni,The Pepperoni Pizza,Classic
+the_greek,The Greek Pizza,Classic

@@ -1,0 +1,1670 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable
+  DTS:refId="Package" xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ExecutableType="SSIS.Package.3"
+  DTS:CreatorName="KHMIRI-PC\khmir"
+  DTS:CreatorComputerName="KHMIRI-PC"
+  DTS:CreationDate="12/31/2023 8:57:32 PM"
+  DTS:PackageType="5"
+  DTS:VersionBuild="5"
+  DTS:VersionGUID="{CA7747E6-72BE-438D-B149-865F55EF8974}"
+  DTS:LastModifiedProductVersion="11.0.2100.60"
+  DTS:LocaleID="1036"
+  DTS:ObjectName="Package"
+  DTS:DTSID="{2325788F-67F6-4511-BBD7-E784E0F303B7}"
+  DTS:CreationName="SSIS.Package.3">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">6</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager]"
+      DTS:ObjectName="Excel Connection Manager"
+      DTS:DTSID="{DC55F766-7DA0-496C-8BDE-423E2E377D0C}"
+      DTS:CreationName="EXCEL">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\khmir\Downloads\data_rh.xls;Extended Properties=&quot;Excel 8.0;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager 1]"
+      DTS:ObjectName="Excel Connection Manager 1"
+      DTS:DTSID="{72C98623-FF27-4977-AC4B-9AEBDA1A6699}"
+      DTS:CreationName="EXCEL">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\khmir\Downloads\data_rh.xls;Extended Properties=&quot;Excel 8.0;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager 2]"
+      DTS:ObjectName="Excel Connection Manager 2"
+      DTS:DTSID="{08D5A8D7-3298-472F-98C0-987EBC6CE646}"
+      DTS:CreationName="EXCEL">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\khmir\Downloads\data_rh.xls;Extended Properties=&quot;Excel 8.0;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.SA_RH]"
+      DTS:ObjectName="LocalHost.SA_RH"
+      DTS:DTSID="{D02E0B20-3C53-43A8-9C5D-9C04AFB08B52}"
+      DTS:CreationName="OLEDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=.;Initial Catalog=SA_RH;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task"
+      DTS:ExecutableType="SSIS.Pipeline.3"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task"
+      DTS:DTSID="{0515F590-35A6-4D9F-A9E5-A0F75E5E2676}"
+      DTS:Description="Data Flow Task"
+      DTS:CreationName="SSIS.Pipeline.3">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task\Excel Source"
+              name="Excel Source"
+              componentClassID="{8C084929-27D1-479F-9641-ABB7CDADF1AC}"
+              description="Excel Source"
+              usesDispositions="true"
+              version="1"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1">
+              <properties>
+                <property
+                  name="CommandTimeout"
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out.">0</property>
+                <property
+                  name="OpenRowset"
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset.">ABS$</property>
+                <property
+                  name="OpenRowsetVariable"
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."></property>
+                <property
+                  name="SqlCommand"
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  name="SqlCommandVariable"
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."></property>
+                <property
+                  name="AccessMode"
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  typeConverter="AccessMode">0</property>
+                <property
+                  name="ParameterMapping"
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Excel Source.Connections[OleDbConnection]"
+                  name="OleDbConnection"
+                  description="The OLE DB runtime connection used to access the database."
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager 2]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager 2]" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[FK_dossier]"
+                      name="FK_dossier"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[FK_dossier]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[FK_dossier]" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[FK_affectation]"
+                      name="FK_affectation"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[FK_affectation]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[FK_affectation]" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[FK_Contrat]"
+                      name="FK_Contrat"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[FK_Contrat]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[FK_Contrat]" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[FK_Temp]"
+                      name="FK_Temp"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[FK_Temp]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[FK_Temp]" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[NbSortie]"
+                      name="NbSortie"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[NbSortie]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[NbSortie]" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[Nbentrées]"
+                      name="Nbentrées"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[Nbentrées]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[Nbentrées]" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[NBAbs]"
+                      name="NBAbs"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[NBAbs]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[NBAbs]" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[FK_dossier]"
+                      name="FK_dossier"
+                      dataType="r8" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[FK_affectation]"
+                      name="FK_affectation"
+                      dataType="r8" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[FK_Contrat]"
+                      name="FK_Contrat"
+                      dataType="r8" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[FK_Temp]"
+                      name="FK_Temp"
+                      dataType="r8" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[NbSortie]"
+                      name="NbSortie"
+                      dataType="r8" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[Nbentrées]"
+                      name="Nbentrées"
+                      dataType="r8" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].ExternalColumns[NBAbs]"
+                      name="NBAbs"
+                      dataType="r8" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output]"
+                  name="Excel Source Error Output"
+                  isErrorOut="true">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[FK_dossier]"
+                      name="FK_dossier"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[FK_dossier]"
+                      dataType="r8" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[FK_affectation]"
+                      name="FK_affectation"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[FK_affectation]"
+                      dataType="r8" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[FK_Contrat]"
+                      name="FK_Contrat"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[FK_Contrat]"
+                      dataType="r8" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[FK_Temp]"
+                      name="FK_Temp"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[FK_Temp]"
+                      dataType="r8" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[NbSortie]"
+                      name="NbSortie"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[NbSortie]"
+                      dataType="r8" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[Nbentrées]"
+                      name="Nbentrées"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[Nbentrées]"
+                      dataType="r8" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[NBAbs]"
+                      name="NBAbs"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[NBAbs]"
+                      dataType="r8" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\OLE DB Destination"
+              name="OLE DB Destination"
+              componentClassID="{4ADA7EAA-136C-4215-8098-D7A7C27FC0D1}"
+              description="OLE DB Destination"
+              usesDispositions="true"
+              version="4"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4">
+              <properties>
+                <property
+                  name="CommandTimeout"
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out.">0</property>
+                <property
+                  name="OpenRowset"
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset.">[dbo].[SA_FactsABS]</property>
+                <property
+                  name="OpenRowsetVariable"
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."></property>
+                <property
+                  name="SqlCommand"
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  name="DefaultCodePage"
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source.">1252</property>
+                <property
+                  name="AlwaysUseDefaultCodePage"
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data.">false</property>
+                <property
+                  name="AccessMode"
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  typeConverter="AccessMode">3</property>
+                <property
+                  name="FastLoadKeepIdentity"
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on.">false</property>
+                <property
+                  name="FastLoadKeepNulls"
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on.">false</property>
+                <property
+                  name="FastLoadOptions"
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on.">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  name="FastLoadMaxInsertCommitSize"
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on.">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
+                  name="OleDbConnection"
+                  description="The OLE DB runtime connection used to access the database."
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.SA_RH]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.SA_RH]" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  name="OLE DB Destination Input"
+                  hasSideEffects="true"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[FK_dossier]"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[FK_dossier]"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FK_dossier]"
+                      cachedName="FK_dossier"
+                      cachedDataType="r8" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[FK_affectation]"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[FK_affectation]"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FK_affectation]"
+                      cachedName="FK_affectation"
+                      cachedDataType="r8" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[FK_Contrat]"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[FK_Contrat]"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FK_Contrat]"
+                      cachedName="FK_Contrat"
+                      cachedDataType="r8" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[FK_Temp]"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[FK_Temp]"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FK_Temp]"
+                      cachedName="FK_Temp"
+                      cachedDataType="r8" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[NbSortie]"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[NbSortie]"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NbSortie]"
+                      cachedName="NbSortie"
+                      cachedDataType="r8" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Nbentrées]"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[Nbentrées]"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Nbentrées]"
+                      cachedName="Nbentrées"
+                      cachedDataType="r8" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[NBAbs]"
+                      lineageId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output].Columns[NBAbs]"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NBAbs]"
+                      cachedName="NBAbs"
+                      cachedDataType="r8" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FK_dossier]"
+                      name="FK_dossier"
+                      dataType="r8" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FK_affectation]"
+                      name="FK_affectation"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FK_Contrat]"
+                      name="FK_Contrat"
+                      dataType="r8" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FK_Temp]"
+                      name="FK_Temp"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NbSortie]"
+                      name="NbSortie"
+                      dataType="r8" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Nbentrées]"
+                      name="Nbentrées"
+                      dataType="r8" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NBAbs]"
+                      name="NBAbs"
+                      dataType="r8" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  name="OLE DB Destination Error Output"
+                  exclusionGroup="1"
+                  synchronousInputId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  isErrorOut="true">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      lineageId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      lineageId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task.Paths[Excel Source Output]"
+              name="Excel Source Output"
+              startId="Package\Data Flow Task\Excel Source.Outputs[Excel Source Output]"
+              endId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\dim_affectation"
+      DTS:ExecutableType="SSIS.Pipeline.3"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="dim_affectation"
+      DTS:DTSID="{52918ABC-DEA4-45BC-9823-4F2F14C3BF12}"
+      DTS:Description="Data Flow Task"
+      DTS:CreationName="SSIS.Pipeline.3">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\dim_affectation\Excel Source"
+              name="Excel Source"
+              componentClassID="{8C084929-27D1-479F-9641-ABB7CDADF1AC}"
+              description="Excel Source"
+              usesDispositions="true"
+              version="1"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1">
+              <properties>
+                <property
+                  name="CommandTimeout"
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out.">0</property>
+                <property
+                  name="OpenRowset"
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset.">Affectation$</property>
+                <property
+                  name="OpenRowsetVariable"
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."></property>
+                <property
+                  name="SqlCommand"
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  name="SqlCommandVariable"
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."></property>
+                <property
+                  name="AccessMode"
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  typeConverter="AccessMode">0</property>
+                <property
+                  name="ParameterMapping"
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\dim_affectation\Excel Source.Connections[OleDbConnection]"
+                  name="OleDbConnection"
+                  description="The OLE DB runtime connection used to access the database."
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager 1]" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\dim_affectation\Excel Source.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\dim_affectation\Excel Source.Outputs[Excel Source Output].Columns[Affectation]"
+                      name="Affectation"
+                      lineageId="Package\dim_affectation\Excel Source.Outputs[Excel Source Output].Columns[Affectation]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\dim_affectation\Excel Source.Outputs[Excel Source Output].ExternalColumns[Affectation]" />
+                    <outputColumn
+                      refId="Package\dim_affectation\Excel Source.Outputs[Excel Source Output].Columns[Id_poste]"
+                      name="Id_poste"
+                      lineageId="Package\dim_affectation\Excel Source.Outputs[Excel Source Output].Columns[Id_poste]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\dim_affectation\Excel Source.Outputs[Excel Source Output].ExternalColumns[Id_poste]" />
+                    <outputColumn
+                      refId="Package\dim_affectation\Excel Source.Outputs[Excel Source Output].Columns[ID_Job]"
+                      name="ID_Job"
+                      lineageId="Package\dim_affectation\Excel Source.Outputs[Excel Source Output].Columns[ID_Job]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\dim_affectation\Excel Source.Outputs[Excel Source Output].ExternalColumns[ID_Job]" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\dim_affectation\Excel Source.Outputs[Excel Source Output].ExternalColumns[Affectation]"
+                      name="Affectation"
+                      dataType="r8" />
+                    <externalMetadataColumn
+                      refId="Package\dim_affectation\Excel Source.Outputs[Excel Source Output].ExternalColumns[Id_poste]"
+                      name="Id_poste"
+                      dataType="r8" />
+                    <externalMetadataColumn
+                      refId="Package\dim_affectation\Excel Source.Outputs[Excel Source Output].ExternalColumns[ID_Job]"
+                      name="ID_Job"
+                      dataType="r8" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\dim_affectation\Excel Source.Outputs[Excel Source Error Output]"
+                  name="Excel Source Error Output"
+                  isErrorOut="true">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\dim_affectation\Excel Source.Outputs[Excel Source Error Output].Columns[Affectation]"
+                      name="Affectation"
+                      lineageId="Package\dim_affectation\Excel Source.Outputs[Excel Source Error Output].Columns[Affectation]"
+                      dataType="r8" />
+                    <outputColumn
+                      refId="Package\dim_affectation\Excel Source.Outputs[Excel Source Error Output].Columns[Id_poste]"
+                      name="Id_poste"
+                      lineageId="Package\dim_affectation\Excel Source.Outputs[Excel Source Error Output].Columns[Id_poste]"
+                      dataType="r8" />
+                    <outputColumn
+                      refId="Package\dim_affectation\Excel Source.Outputs[Excel Source Error Output].Columns[ID_Job]"
+                      name="ID_Job"
+                      lineageId="Package\dim_affectation\Excel Source.Outputs[Excel Source Error Output].Columns[ID_Job]"
+                      dataType="r8" />
+                    <outputColumn
+                      refId="Package\dim_affectation\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      lineageId="Package\dim_affectation\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\dim_affectation\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      lineageId="Package\dim_affectation\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\dim_affectation\OLE DB Destination"
+              name="OLE DB Destination"
+              componentClassID="{4ADA7EAA-136C-4215-8098-D7A7C27FC0D1}"
+              description="OLE DB Destination"
+              usesDispositions="true"
+              version="4"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4">
+              <properties>
+                <property
+                  name="CommandTimeout"
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out.">0</property>
+                <property
+                  name="OpenRowset"
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset.">[dbo].[SA_Affectation]</property>
+                <property
+                  name="OpenRowsetVariable"
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."></property>
+                <property
+                  name="SqlCommand"
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  name="DefaultCodePage"
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source.">1252</property>
+                <property
+                  name="AlwaysUseDefaultCodePage"
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data.">false</property>
+                <property
+                  name="AccessMode"
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  typeConverter="AccessMode">3</property>
+                <property
+                  name="FastLoadKeepIdentity"
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on.">false</property>
+                <property
+                  name="FastLoadKeepNulls"
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on.">false</property>
+                <property
+                  name="FastLoadOptions"
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on.">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  name="FastLoadMaxInsertCommitSize"
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on.">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\dim_affectation\OLE DB Destination.Connections[OleDbConnection]"
+                  name="OleDbConnection"
+                  description="The OLE DB runtime connection used to access the database."
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.SA_RH]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.SA_RH]" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\dim_affectation\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  name="OLE DB Destination Input"
+                  hasSideEffects="true"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\dim_affectation\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Affectation]"
+                      lineageId="Package\dim_affectation\Excel Source.Outputs[Excel Source Output].Columns[Affectation]"
+                      externalMetadataColumnId="Package\dim_affectation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Affectation]"
+                      cachedName="Affectation"
+                      cachedDataType="r8" />
+                    <inputColumn
+                      refId="Package\dim_affectation\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Id_poste]"
+                      lineageId="Package\dim_affectation\Excel Source.Outputs[Excel Source Output].Columns[Id_poste]"
+                      externalMetadataColumnId="Package\dim_affectation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Id_poste]"
+                      cachedName="Id_poste"
+                      cachedDataType="r8" />
+                    <inputColumn
+                      refId="Package\dim_affectation\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ID_Job]"
+                      lineageId="Package\dim_affectation\Excel Source.Outputs[Excel Source Output].Columns[ID_Job]"
+                      externalMetadataColumnId="Package\dim_affectation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ID_Job]"
+                      cachedName="ID_Job"
+                      cachedDataType="r8" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\dim_affectation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Affectation]"
+                      name="Affectation"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      refId="Package\dim_affectation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Id_poste]"
+                      name="Id_poste"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      refId="Package\dim_affectation\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ID_Job]"
+                      name="ID_Job"
+                      dataType="i4" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\dim_affectation\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  name="OLE DB Destination Error Output"
+                  exclusionGroup="1"
+                  synchronousInputId="Package\dim_affectation\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  isErrorOut="true">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\dim_affectation\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      lineageId="Package\dim_affectation\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\dim_affectation\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      lineageId="Package\dim_affectation\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\dim_affectation.Paths[Excel Source Output]"
+              name="Excel Source Output"
+              startId="Package\dim_affectation\Excel Source.Outputs[Excel Source Output]"
+              endId="Package\dim_affectation\OLE DB Destination.Inputs[OLE DB Destination Input]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\dim_dossier"
+      DTS:ExecutableType="SSIS.Pipeline.3"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="dim_dossier"
+      DTS:DTSID="{8C13ACE4-589B-4FFF-8374-EF20616F529F}"
+      DTS:Description="Data Flow Task"
+      DTS:CreationName="SSIS.Pipeline.3">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\dim_dossier\Derived Column"
+              name="Derived Column"
+              componentClassID="{49928E82-9C4E-49F0-AABE-3812B82707EC}"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              usesDispositions="true"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0">
+              <inputs>
+                <input
+                  refId="Package\dim_dossier\Derived Column.Inputs[Derived Column Input]"
+                  name="Derived Column Input"
+                  description="Input to the Derived Column Transformation">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\dim_dossier\Derived Column.Inputs[Derived Column Input].Columns[Sex]"
+                      lineageId="Package\dim_dossier\Excel Source.Outputs[Excel Source Output].Columns[Sex]"
+                      usageType="readWrite"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      cachedName="Sex"
+                      cachedDataType="wstr"
+                      cachedLength="255">
+                      <properties>
+                        <property
+                          name="Expression"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          containsID="true">#{Package\dim_dossier\Excel Source.Outputs[Excel Source Output].Columns[Sex]} == "Homme" ? "H" : "F"</property>
+                        <property
+                          name="FriendlyExpression"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          containsID="true"
+                          expressionType="Notify">Sex == "Homme" ? "H" : "F"</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\dim_dossier\Derived Column.Outputs[Derived Column Output]"
+                  name="Derived Column Output"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  synchronousInputId="Package\dim_dossier\Derived Column.Inputs[Derived Column Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\dim_dossier\Derived Column.Outputs[Derived Column Error Output]"
+                  name="Derived Column Error Output"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  synchronousInputId="Package\dim_dossier\Derived Column.Inputs[Derived Column Input]"
+                  isErrorOut="true">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\dim_dossier\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      lineageId="Package\dim_dossier\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\dim_dossier\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      lineageId="Package\dim_dossier\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\dim_dossier\Excel Source"
+              name="Excel Source"
+              componentClassID="{8C084929-27D1-479F-9641-ABB7CDADF1AC}"
+              description="Excel Source"
+              usesDispositions="true"
+              version="1"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1">
+              <properties>
+                <property
+                  name="CommandTimeout"
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out.">0</property>
+                <property
+                  name="OpenRowset"
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset.">DossierPerso$</property>
+                <property
+                  name="OpenRowsetVariable"
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."></property>
+                <property
+                  name="SqlCommand"
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  name="SqlCommandVariable"
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."></property>
+                <property
+                  name="AccessMode"
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  typeConverter="AccessMode">0</property>
+                <property
+                  name="ParameterMapping"
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\dim_dossier\Excel Source.Connections[OleDbConnection]"
+                  name="OleDbConnection"
+                  description="The OLE DB runtime connection used to access the database."
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager]" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\dim_dossier\Excel Source.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\dim_dossier\Excel Source.Outputs[Excel Source Output].Columns[PK dossier ]"
+                      name="PK dossier "
+                      lineageId="Package\dim_dossier\Excel Source.Outputs[Excel Source Output].Columns[PK dossier ]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\dim_dossier\Excel Source.Outputs[Excel Source Output].ExternalColumns[PK dossier ]" />
+                    <outputColumn
+                      refId="Package\dim_dossier\Excel Source.Outputs[Excel Source Output].Columns[Matricule]"
+                      name="Matricule"
+                      lineageId="Package\dim_dossier\Excel Source.Outputs[Excel Source Output].Columns[Matricule]"
+                      length="255"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\dim_dossier\Excel Source.Outputs[Excel Source Output].ExternalColumns[Matricule]" />
+                    <outputColumn
+                      refId="Package\dim_dossier\Excel Source.Outputs[Excel Source Output].Columns[Nom]"
+                      name="Nom"
+                      lineageId="Package\dim_dossier\Excel Source.Outputs[Excel Source Output].Columns[Nom]"
+                      length="255"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\dim_dossier\Excel Source.Outputs[Excel Source Output].ExternalColumns[Nom]" />
+                    <outputColumn
+                      refId="Package\dim_dossier\Excel Source.Outputs[Excel Source Output].Columns[Prenom]"
+                      name="Prenom"
+                      lineageId="Package\dim_dossier\Excel Source.Outputs[Excel Source Output].Columns[Prenom]"
+                      length="255"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\dim_dossier\Excel Source.Outputs[Excel Source Output].ExternalColumns[Prenom]" />
+                    <outputColumn
+                      refId="Package\dim_dossier\Excel Source.Outputs[Excel Source Output].Columns[Sex]"
+                      name="Sex"
+                      lineageId="Package\dim_dossier\Excel Source.Outputs[Excel Source Output].Columns[Sex]"
+                      length="255"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\dim_dossier\Excel Source.Outputs[Excel Source Output].ExternalColumns[Sex]" />
+                    <outputColumn
+                      refId="Package\dim_dossier\Excel Source.Outputs[Excel Source Output].Columns[Date_de_ness]"
+                      name="Date_de_ness"
+                      lineageId="Package\dim_dossier\Excel Source.Outputs[Excel Source Output].Columns[Date_de_ness]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\dim_dossier\Excel Source.Outputs[Excel Source Output].ExternalColumns[Date_de_ness]" />
+                    <outputColumn
+                      refId="Package\dim_dossier\Excel Source.Outputs[Excel Source Output].Columns[Pays]"
+                      name="Pays"
+                      lineageId="Package\dim_dossier\Excel Source.Outputs[Excel Source Output].Columns[Pays]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\dim_dossier\Excel Source.Outputs[Excel Source Output].ExternalColumns[Pays]" />
+                    <outputColumn
+                      refId="Package\dim_dossier\Excel Source.Outputs[Excel Source Output].Columns[Ville]"
+                      name="Ville"
+                      lineageId="Package\dim_dossier\Excel Source.Outputs[Excel Source Output].Columns[Ville]"
+                      length="255"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\dim_dossier\Excel Source.Outputs[Excel Source Output].ExternalColumns[Ville]" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\dim_dossier\Excel Source.Outputs[Excel Source Output].ExternalColumns[PK dossier ]"
+                      name="PK dossier "
+                      dataType="r8" />
+                    <externalMetadataColumn
+                      refId="Package\dim_dossier\Excel Source.Outputs[Excel Source Output].ExternalColumns[Matricule]"
+                      name="Matricule"
+                      dataType="wstr"
+                      length="255" />
+                    <externalMetadataColumn
+                      refId="Package\dim_dossier\Excel Source.Outputs[Excel Source Output].ExternalColumns[Nom]"
+                      name="Nom"
+                      dataType="wstr"
+                      length="255" />
+                    <externalMetadataColumn
+                      refId="Package\dim_dossier\Excel Source.Outputs[Excel Source Output].ExternalColumns[Prenom]"
+                      name="Prenom"
+                      dataType="wstr"
+                      length="255" />
+                    <externalMetadataColumn
+                      refId="Package\dim_dossier\Excel Source.Outputs[Excel Source Output].ExternalColumns[Sex]"
+                      name="Sex"
+                      dataType="wstr"
+                      length="255" />
+                    <externalMetadataColumn
+                      refId="Package\dim_dossier\Excel Source.Outputs[Excel Source Output].ExternalColumns[Date_de_ness]"
+                      name="Date_de_ness"
+                      dataType="date" />
+                    <externalMetadataColumn
+                      refId="Package\dim_dossier\Excel Source.Outputs[Excel Source Output].ExternalColumns[Pays]"
+                      name="Pays"
+                      dataType="r8" />
+                    <externalMetadataColumn
+                      refId="Package\dim_dossier\Excel Source.Outputs[Excel Source Output].ExternalColumns[Ville]"
+                      name="Ville"
+                      dataType="wstr"
+                      length="255" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\dim_dossier\Excel Source.Outputs[Excel Source Error Output]"
+                  name="Excel Source Error Output"
+                  isErrorOut="true">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\dim_dossier\Excel Source.Outputs[Excel Source Error Output].Columns[PK dossier ]"
+                      name="PK dossier "
+                      lineageId="Package\dim_dossier\Excel Source.Outputs[Excel Source Error Output].Columns[PK dossier ]"
+                      dataType="r8" />
+                    <outputColumn
+                      refId="Package\dim_dossier\Excel Source.Outputs[Excel Source Error Output].Columns[Matricule]"
+                      name="Matricule"
+                      lineageId="Package\dim_dossier\Excel Source.Outputs[Excel Source Error Output].Columns[Matricule]"
+                      length="255"
+                      dataType="wstr" />
+                    <outputColumn
+                      refId="Package\dim_dossier\Excel Source.Outputs[Excel Source Error Output].Columns[Nom]"
+                      name="Nom"
+                      lineageId="Package\dim_dossier\Excel Source.Outputs[Excel Source Error Output].Columns[Nom]"
+                      length="255"
+                      dataType="wstr" />
+                    <outputColumn
+                      refId="Package\dim_dossier\Excel Source.Outputs[Excel Source Error Output].Columns[Prenom]"
+                      name="Prenom"
+                      lineageId="Package\dim_dossier\Excel Source.Outputs[Excel Source Error Output].Columns[Prenom]"
+                      length="255"
+                      dataType="wstr" />
+                    <outputColumn
+                      refId="Package\dim_dossier\Excel Source.Outputs[Excel Source Error Output].Columns[Sex]"
+                      name="Sex"
+                      lineageId="Package\dim_dossier\Excel Source.Outputs[Excel Source Error Output].Columns[Sex]"
+                      length="255"
+                      dataType="wstr" />
+                    <outputColumn
+                      refId="Package\dim_dossier\Excel Source.Outputs[Excel Source Error Output].Columns[Date_de_ness]"
+                      name="Date_de_ness"
+                      lineageId="Package\dim_dossier\Excel Source.Outputs[Excel Source Error Output].Columns[Date_de_ness]"
+                      dataType="date" />
+                    <outputColumn
+                      refId="Package\dim_dossier\Excel Source.Outputs[Excel Source Error Output].Columns[Pays]"
+                      name="Pays"
+                      lineageId="Package\dim_dossier\Excel Source.Outputs[Excel Source Error Output].Columns[Pays]"
+                      dataType="r8" />
+                    <outputColumn
+                      refId="Package\dim_dossier\Excel Source.Outputs[Excel Source Error Output].Columns[Ville]"
+                      name="Ville"
+                      lineageId="Package\dim_dossier\Excel Source.Outputs[Excel Source Error Output].Columns[Ville]"
+                      length="255"
+                      dataType="wstr" />
+                    <outputColumn
+                      refId="Package\dim_dossier\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      lineageId="Package\dim_dossier\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\dim_dossier\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      lineageId="Package\dim_dossier\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\dim_dossier\OLE DB Destination"
+              name="OLE DB Destination"
+              componentClassID="{4ADA7EAA-136C-4215-8098-D7A7C27FC0D1}"
+              description="OLE DB Destination"
+              usesDispositions="true"
+              version="4"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4">
+              <properties>
+                <property
+                  name="CommandTimeout"
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out.">0</property>
+                <property
+                  name="OpenRowset"
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset.">[dbo].[SA_perso]</property>
+                <property
+                  name="OpenRowsetVariable"
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."></property>
+                <property
+                  name="SqlCommand"
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  name="DefaultCodePage"
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source.">1252</property>
+                <property
+                  name="AlwaysUseDefaultCodePage"
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data.">false</property>
+                <property
+                  name="AccessMode"
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  typeConverter="AccessMode">3</property>
+                <property
+                  name="FastLoadKeepIdentity"
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on.">false</property>
+                <property
+                  name="FastLoadKeepNulls"
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on.">false</property>
+                <property
+                  name="FastLoadOptions"
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on.">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  name="FastLoadMaxInsertCommitSize"
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on.">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\dim_dossier\OLE DB Destination.Connections[OleDbConnection]"
+                  name="OleDbConnection"
+                  description="The OLE DB runtime connection used to access the database."
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.SA_RH]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.SA_RH]" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\dim_dossier\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  name="OLE DB Destination Input"
+                  hasSideEffects="true"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\dim_dossier\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Matricule]"
+                      lineageId="Package\dim_dossier\Excel Source.Outputs[Excel Source Output].Columns[Matricule]"
+                      externalMetadataColumnId="Package\dim_dossier\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Matricule]"
+                      cachedName="Matricule"
+                      cachedDataType="wstr"
+                      cachedLength="255" />
+                    <inputColumn
+                      refId="Package\dim_dossier\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Nom]"
+                      lineageId="Package\dim_dossier\Excel Source.Outputs[Excel Source Output].Columns[Nom]"
+                      externalMetadataColumnId="Package\dim_dossier\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Nom]"
+                      cachedName="Nom"
+                      cachedDataType="wstr"
+                      cachedLength="255" />
+                    <inputColumn
+                      refId="Package\dim_dossier\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Prenom]"
+                      lineageId="Package\dim_dossier\Excel Source.Outputs[Excel Source Output].Columns[Prenom]"
+                      externalMetadataColumnId="Package\dim_dossier\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Prenom]"
+                      cachedName="Prenom"
+                      cachedDataType="wstr"
+                      cachedLength="255" />
+                    <inputColumn
+                      refId="Package\dim_dossier\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Sex]"
+                      lineageId="Package\dim_dossier\Excel Source.Outputs[Excel Source Output].Columns[Sex]"
+                      externalMetadataColumnId="Package\dim_dossier\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Sex]"
+                      cachedName="Sex"
+                      cachedDataType="wstr"
+                      cachedLength="255" />
+                    <inputColumn
+                      refId="Package\dim_dossier\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Date_de_ness]"
+                      lineageId="Package\dim_dossier\Excel Source.Outputs[Excel Source Output].Columns[Date_de_ness]"
+                      externalMetadataColumnId="Package\dim_dossier\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Date_de_ness]"
+                      cachedName="Date_de_ness"
+                      cachedDataType="date" />
+                    <inputColumn
+                      refId="Package\dim_dossier\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Pays]"
+                      lineageId="Package\dim_dossier\Excel Source.Outputs[Excel Source Output].Columns[Pays]"
+                      externalMetadataColumnId="Package\dim_dossier\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Pays]"
+                      cachedName="Pays"
+                      cachedDataType="r8" />
+                    <inputColumn
+                      refId="Package\dim_dossier\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Ville]"
+                      lineageId="Package\dim_dossier\Excel Source.Outputs[Excel Source Output].Columns[Ville]"
+                      externalMetadataColumnId="Package\dim_dossier\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Ville]"
+                      cachedName="Ville"
+                      cachedDataType="wstr"
+                      cachedLength="255" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\dim_dossier\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PK_dossier]"
+                      name="PK_dossier"
+                      dataType="r8" />
+                    <externalMetadataColumn
+                      refId="Package\dim_dossier\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Matricule]"
+                      name="Matricule"
+                      dataType="wstr"
+                      length="255" />
+                    <externalMetadataColumn
+                      refId="Package\dim_dossier\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Nom]"
+                      name="Nom"
+                      dataType="wstr"
+                      length="255" />
+                    <externalMetadataColumn
+                      refId="Package\dim_dossier\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Prenom]"
+                      name="Prenom"
+                      dataType="wstr"
+                      length="255" />
+                    <externalMetadataColumn
+                      refId="Package\dim_dossier\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Sex]"
+                      name="Sex"
+                      dataType="wstr"
+                      length="255" />
+                    <externalMetadataColumn
+                      refId="Package\dim_dossier\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Date_de_ness]"
+                      name="Date_de_ness"
+                      dataType="dbTimeStamp" />
+                    <externalMetadataColumn
+                      refId="Package\dim_dossier\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Pays]"
+                      name="Pays"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      refId="Package\dim_dossier\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Ville]"
+                      name="Ville"
+                      dataType="wstr"
+                      length="255" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\dim_dossier\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  name="OLE DB Destination Error Output"
+                  exclusionGroup="1"
+                  synchronousInputId="Package\dim_dossier\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  isErrorOut="true">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\dim_dossier\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      lineageId="Package\dim_dossier\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\dim_dossier\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      lineageId="Package\dim_dossier\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\dim_dossier.Paths[Derived Column Output]"
+              name="Derived Column Output"
+              startId="Package\dim_dossier\Derived Column.Outputs[Derived Column Output]"
+              endId="Package\dim_dossier\OLE DB Destination.Inputs[OLE DB Destination Input]" />
+            <path
+              refId="Package\dim_dossier.Paths[Excel Source Output]"
+              name="Excel Source Output"
+              startId="Package\dim_dossier\Excel Source.Outputs[Excel Source Output]"
+              endId="Package\dim_dossier\Derived Column.Inputs[Derived Column Input]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:From="Package\dim_dossier"
+      DTS:To="Package\dim_affectation"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:DTSID="{AE2E1CB1-3E41-4586-B3D5-393847D5970C}"
+      DTS:CreationName="" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:From="Package\dim_affectation"
+      DTS:To="Package\Data Flow Task"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:DTSID="{4E847AA1-E36D-40C7-B25D-83CA06A18244}"
+      DTS:CreationName="" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="sql11">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="134.4,41.6"
+          Id="Package\dim_dossier"
+          TopLeft="151.771431169705,182.117649624174" />
+        <NodeLayout
+          Size="150.4,41.6"
+          Id="Package\dim_affectation"
+          TopLeft="279.200004768372,46.9176477280455" />
+        <NodeLayout
+          Size="150.4,41.6"
+          Id="Package\Data Flow Task"
+          TopLeft="494.62857986567,59.152942017288" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="218.971431169705,182.117649624174">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="135.428573598667,-93.6000018961289"
+              Start="0,0"
+              End="135.428573598667,-86.1000018961289">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-42.8000009480645" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-42.8000009480645"
+                    Point2="0,-46.8000009480645"
+                    Point3="4,-46.8000009480645" />
+                  <mssgle:LineSegment
+                    End="131.428573598667,-46.8000009480645" />
+                  <mssgle:CubicBezierSegment
+                    Point1="131.428573598667,-46.8000009480645"
+                    Point2="135.428573598667,-46.8000009480645"
+                    Point3="135.428573598667,-50.8000009480645" />
+                  <mssgle:LineSegment
+                    End="135.428573598667,-86.1000018961289" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="429.600004768372,67.7176477280455">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="65.0285750972981,12.2352942892424"
+              Start="0,0"
+              End="57.5285750972981,12.2352942892424">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="28.514287548649,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="28.514287548649,0"
+                    Point2="32.514287548649,0"
+                    Point3="32.514287548649,4" />
+                  <mssgle:LineSegment
+                    End="32.514287548649,8.23529428924245" />
+                  <mssgle:CubicBezierSegment
+                    Point1="32.514287548649,8.23529428924245"
+                    Point2="32.514287548649,12.2352942892424"
+                    Point3="36.514287548649,12.2352942892424" />
+                  <mssgle:LineSegment
+                    End="57.5285750972981,12.2352942892424" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\dim_dossier">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="137.6,41.6"
+          Id="Package\dim_dossier\Excel Source"
+          TopLeft="47.2000008174351,31.6235298664925" />
+        <NodeLayout
+          Size="152,41.6"
+          Id="Package\dim_dossier\Derived Column"
+          TopLeft="404.342864042399,106.258825030871" />
+        <EdgeLayout
+          Id="Package\dim_dossier.Paths[Excel Source Output]"
+          TopLeft="116.000000817435,73.2235298664925">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="364.342863224964,33.0352951643789"
+              Start="0,0"
+              End="364.342863224964,25.5352951643789">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,12.5176475821894" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,12.5176475821894"
+                    Point2="0,16.5176475821894"
+                    Point3="4,16.5176475821894" />
+                  <mssgle:LineSegment
+                    End="360.342863224964,16.5176475821894" />
+                  <mssgle:CubicBezierSegment
+                    Point1="360.342863224964,16.5176475821894"
+                    Point2="364.342863224964,16.5176475821894"
+                    Point3="364.342863224964,20.5176475821894" />
+                  <mssgle:LineSegment
+                    End="364.342863224964,25.5352951643789" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="169.6,41.6"
+          Id="Package\dim_dossier\OLE DB Destination"
+          TopLeft="368.342863429323,199.247061629114" />
+        <EdgeLayout
+          Id="Package\dim_dossier.Paths[Derived Column Output]"
+          TopLeft="480.342864042399,147.858825030871">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-27.2000006130763,51.3882365982425"
+              Start="0,0"
+              End="-27.2000006130763,43.8882365982425">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.6941182991213" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.6941182991213"
+                    Point2="0,25.6941182991213"
+                    Point3="-4,25.6941182991213" />
+                  <mssgle:LineSegment
+                    End="-23.2000006130763,25.6941182991213" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-23.2000006130763,25.6941182991213"
+                    Point2="-27.2000006130763,25.6941182991213"
+                    Point3="-27.2000006130763,29.6941182991213" />
+                  <mssgle:LineSegment
+                    End="-27.2000006130763,43.8882365982425" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\dim_dossier\Excel Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\dim_affectation">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="137.6,41.6"
+          Id="Package\dim_affectation\Excel Source"
+          TopLeft="60,22.4" />
+        <NodeLayout
+          Size="169.6,41.6"
+          Id="Package\dim_affectation\OLE DB Destination"
+          TopLeft="267.2,200" />
+        <EdgeLayout
+          Id="Package\dim_affectation.Paths[Excel Source Output]"
+          TopLeft="128.8,64">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="223.2,136"
+              Start="0,0"
+              End="223.2,128.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,64" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,64"
+                    Point2="0,68"
+                    Point3="4,68" />
+                  <mssgle:LineSegment
+                    End="219.2,68" />
+                  <mssgle:CubicBezierSegment
+                    Point1="219.2,68"
+                    Point2="223.2,68"
+                    Point3="223.2,72" />
+                  <mssgle:LineSegment
+                    End="223.2,128.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\dim_affectation\Excel Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\dim_affectation\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="137.6,41.6"
+          Id="Package\Data Flow Task\Excel Source"
+          TopLeft="92.8,63.2" />
+        <NodeLayout
+          Size="169.6,41.6"
+          Id="Package\Data Flow Task\OLE DB Destination"
+          TopLeft="313.6,115.2" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Excel Source Output]"
+          TopLeft="230.4,84">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="83.2,52"
+              Start="0,0"
+              End="75.7,52">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="37.6,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="37.6,0"
+                    Point2="41.6,0"
+                    Point3="41.6,4" />
+                  <mssgle:LineSegment
+                    End="41.6,48" />
+                  <mssgle:CubicBezierSegment
+                    Point1="41.6,48"
+                    Point2="41.6,52"
+                    Point3="45.6,52" />
+                  <mssgle:LineSegment
+                    End="75.7,52" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Excel Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\dim_dossier\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

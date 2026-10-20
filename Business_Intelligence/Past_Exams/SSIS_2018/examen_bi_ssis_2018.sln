@@ -1,0 +1,17 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "examen_bi_ssis_2018", "examen_bi_ssis_2018\examen_bi_ssis_2018.dtproj", "{5E2E673D-7E78-49FA-B540-AF969698A268}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5E2E673D-7E78-49FA-B540-AF969698A268}.Development|Default.ActiveCfg = Development
+		{5E2E673D-7E78-49FA-B540-AF969698A268}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

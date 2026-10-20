@@ -1,0 +1,17 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "ExamenRH_SSIS", "ExamenRH_SSIS\ExamenRH_SSIS.dtproj", "{4106829A-5944-41F6-B64F-514587FB23C2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4106829A-5944-41F6-B64F-514587FB23C2}.Development|Default.ActiveCfg = Development
+		{4106829A-5944-41F6-B64F-514587FB23C2}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

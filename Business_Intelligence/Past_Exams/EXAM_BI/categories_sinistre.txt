@@ -1,0 +1,4 @@
+CodeCategorie,NomCategorie
+S1,Accident de voiture
+S2,Incendie
+S3,Vandalisme

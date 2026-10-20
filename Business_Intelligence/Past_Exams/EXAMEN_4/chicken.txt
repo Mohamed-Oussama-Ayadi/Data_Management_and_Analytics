@@ -1,0 +1,7 @@
+﻿pizza_type_id,name,category
+bbq_ckn,The Barbecue Chicken Pizza,Chicken
+cali_ckn,The California Chicken Pizza,Chicken
+ckn_alfredo,The Chicken Alfredo Pizza,Chicken
+ckn_pesto,The Chicken Pesto Pizza,Chicken
+southw_ckn,The Southwest Chicken Pizza,Chicken
+thai_ckn,The Thai Chicken Pizza,Chicken

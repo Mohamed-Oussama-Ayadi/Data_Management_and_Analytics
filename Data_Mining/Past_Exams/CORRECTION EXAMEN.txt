@@ -1,0 +1,44 @@
+****************************DATA_MINING**************************
+
+PROBLEME:
+--Partie I Analyse préliminaire--
+1/ CRISP-DM et cemma, deux méthodologies iteratives
+2/ A- Un objectif métier desciptif : Repartition des etudiants K-means
+                                     Comprendre les criteres de selection ACP
+   B- Un objectif mérier prédictif : prédire la chance d'admission, REGRESSION lineaire ou ADD
+3/ Resumé statistique : research var qualit, serial number c'est indexe, il n'y a pas de variables aberantes
+4/ Pour determiner les valeurs aberantes on peut utiliser BOXPLOT
+
+--Partie II  Clustering--
+1/ K-Means - CAH
+2/ Normalisation // Suppression de la variable cible // 1er colonne comme indice
+3/ Coupe au niveau Height 80 pour obtenir 2 clusters (en se referant de la distance inter-classe)
+4/ Inertie inter-classe stable -> 2 clusters
+
+--Partie III Classification Supervisée--
+1/ Creer un seuil (mediane=0.7), chance >07 : ADMIS // <0.7 refusé 
+2/ A- Particularité de l'indice de GINI: il est appliquable sur les 2 types de données (quanti & qualit)
+   B- Arbe de decision + explication de chaque indice
+   C- Noeud pur(3) CGPA < 8.735 (si on va calculer indice de GINI =0)
+   D-                                        CGPA *RACINE*
+                                <8.735 |non?              |    >=8.735
+                                        GRE.Score        Chance=OUI*  *FEUILLE = DECISION*
+                              <318.5   |       | >=318.5
+                                Chance=NON*    GRE.SCORE
+                                           <326  |         |  >=326
+                                                LOR        Chance=OUI*  
+                                          <4.25 |    | >=4.25
+                                               LOR   Chance=OUI*
+                                    <2.75 |      | >=2.75
+                                Chance=NON*    GRE.Score
+                                             <323 |      | >=323
+                                         Chance= NON*   Chance=OUI*
+3/ A- NON LINEAIRE
+   B-
+4/ A- TMC (0 svm) = 15/215        Proposition |= 0.001  SVM -> ADD : modele hybride
+      TMC (1 svm) = 12/179+12                 |= 0.001
+      TMC (svm)   = 12-15/4063 = 0.06
+   B- Criteres: qui converge, 
+aleatoire, 
+AUC > -> SVM plus performant,
+projection : le plus proche

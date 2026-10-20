@@ -1,0 +1,30 @@
+
+#**************************************KNN ********************************************
+# Échantillonnage des données
+index <- sample(1:nrow(hopital), 0.8 * nrow(hopital))
+train_data <- hopital[index, ]
+test_data <- hopital[-index, ]
+
+# Filtrer les données où les valeurs ne sont pas manquantes
+train_data <- train_data %>% filter_all(all_vars(. != -1))
+test_data <- test_data %>% filter_all(all_vars(. != -1))
+
+# Appliquer l'algorithme k-NN
+knn_model <- knn(
+  train = train_data[, c('age', 'education', 'currentSmoker', 'cigsPerDay', 'BPMeds', 'prevalentStroke', 'prevalentHyp', 'diabetes', 'totChol', 'sysBP', 'diaBP', 'BMI', 'heartRate', 'glucose')],
+  test = test_data[, c('age', 'education', 'currentSmoker', 'cigsPerDay', 'BPMeds', 'prevalentStroke', 'prevalentHyp', 'diabetes', 'totChol', 'sysBP', 'diaBP', 'BMI', 'heartRate', 'glucose')],
+  cl = train_data$TenYearCHD,
+  k = 17
+)
+
+# Matrice de confusion
+conf_matrix <- table(knn_model, test_data$TenYearCHD)
+conf_matrix
+
+# Évaluation du modèle
+confusionMatrix(knn_model, as.factor(test_data$TenYearCHD))
+
+# Courbe ROC
+roc_curve <- roc(as.numeric(test_data$TenYearCHD), as.numeric(knn_model))
+plot(roc_curve)
+auc(roc_curve)

@@ -1,0 +1,23 @@
+NomClient,CodeClient,Pays,Region,Ville
+Viviane Subercaseaux,C23,France,Île-de-France,Paris
+Aliénor Azaïs,C24,France,Auvergne-Rhône-Alpes,Lyon
+Louise Allaire,C25,Allemagne,Haute-Bavière,Munich
+Andrée Doisneau,C26,France,Provence-Alpes-Côte d'Azur,Marseille
+Roberte Azéma,C27,France,Provence-Alpes-Côte d'Azur,Nice
+Juliette Devereaux,C28,France,Provence-Alpes-Côte d'Azur,Marseille
+Claudie Fétique,C29,Spain,Catalonia,Barcelona
+Germaine Bourque,C30,France,Provence-Alpes-Côte d'Azur,Nice
+Patricia Renou,C31,Allemagne,Haute-Bavière,Munich
+Marie-Pierre Maret,C32,France,Île-de-France,Paris
+Anna Bourbeau,C33,France,Provence-Alpes-Côte d'Azur,Marseille
+Catherine Beaufils,C34,Allemagne,Haute-Bavière,Munich
+Marie-France Beaumont,C35,France,Provence-Alpes-Côte d'Azur,Marseille
+Danielle Jaccoud,C36,France,Provence-Alpes-Côte d'Azur,Nice
+Géraldine Pascal,C37,France,Provence-Alpes-Côte d'Azur,Nice
+Clémence Verninac,C38,France,Île-de-France,Paris
+Mélodie Auclair,C39,Allemagne,Haute-Bavière,Munich
+Laetitia Asselineau,C40,France,Île-de-France,Paris
+Elodie Delannoy,C41,France,Provence-Alpes-Côte d'Azur,Nice
+Marianne Brasseur,C42,France,Île-de-France,Paris
+Élisa Lozé,C43,Allemagne,Haute-Bavière,Munich
+Sarah Laflèche,C44,France,Île-de-France,Paris
