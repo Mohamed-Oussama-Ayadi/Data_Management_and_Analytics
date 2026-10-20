@@ -1,0 +1,15 @@
+         Ciel Température Humidité   Vent Jouer
+1  Ensoleillé        27.5       85 Faible    Non
+2  Ensoleillé        25.0       90   Fort    Non
+3     Couvert        26.5       86 Faible    Oui
+4       Pluie        20.0       96 Faible    Oui
+5       Pluie        19.0       80 Faible    Oui
+6       Pluie        17.5       70   Fort    Non
+7     Couvert        17.0       65   Fort    Oui
+8  Ensoleillé        21.0       95 Faible    Non
+9  Ensoleillé        19.5       70 Faible    Oui
+10      Pluie        22.5       80 Faible    Oui
+11 Ensoleillé        22.5       70   Fort    Oui
+12    Couvert        21.0       90   Fort    Oui
+13    Couvert        25.5       75 Faible    Oui
+14      Pluie        20.5       91   Fort    Non

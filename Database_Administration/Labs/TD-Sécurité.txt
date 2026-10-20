@@ -1,0 +1,83 @@
+Exercice 1:
+1) Visualisez le paramètre d’audit et l’activer (utiliser l’option DB_EXTENDED):
+
+SHOW PARAMETER AUDIT_TRAIL;
+
+ALTER SYSTEM SET AUDIT_TRAIL=DB_EXTENDED SCOPE=SPFILE;
+
+2) Créez un utilisateur TD4 et attribuez-lui les privilèges nécessaires:
+CREATE USER TD4 IDENTIFIED BY password;
+GRANT CONNECT, CREATE TABLE, CREATE PROCEDURE TO TD4;
+ 
+3) Lancer l’audit pour l’utilisateur TD4:
+
+AUDIT ALL ON SCHEMA BY TD4 BY ACCESS;
+
+4) Connectez-vous avec TD4, créez une table, insérez des lignes, lancez des requêtes et supprimez la table:
+
+CONNECT TD4/password
+
+CREATE TABLE my_table (id NUMBER, name VARCHAR2(50));
+INSERT INTO my_table VALUES (1, 'John');
+SELECT * FROM my_table;
+UPDATE my_table SET name = 'Jane' WHERE id = 1;
+DELETE FROM my_table WHERE id = 1;
+DROP TABLE my_table;
+
+
+5) Listez toutes les opérations effectuées sur des objets en (4):
+SELECT username, action_name, obj_name, TO_CHAR(timestamp, 'DD-MON-YYYY HH24:MI:SS') AS action_date
+FROM dba_audit_trail
+WHERE username = 'TD4';
+
+2) Déterminez le nombre de connexions/déconnexions de TP4:
+
+SELECT COUNT(*) AS num_connections
+FROM dba_audit_trail
+WHERE username = 'TP4' AND action_name IN ('LOGON', 'LOGOFF');
+
+Exercice 2:
+
+1) Créez un utilisateur TD41 et attribuez-lui le rôle DBA:
+CREATE USER TD41 IDENTIFIED BY password;
+GRANT DBA TO TD41;
+
+2) Auditer toutes les créations de sessions de la base relatives à TD41:
+
+AUDIT CREATE SESSION BY TD41 BY ACCESS;
+
+3) Connectez-vous avec TD41 et créez les deux tables:
+CONNECT TD41/password
+
+CREATE TABLE table1 (a NUMBER);
+CREATE TABLE table2 (b NUMBER);
+ 
+4) Auditez toutes les opérations de LMD sur table1 et les opérations de sélection sur table2:
+
+AUDIT ALL ON table1 BY SESSION;
+AUDIT SELECT ON table2 BY ACCESS;
+
+5) Visualisez les options d'audit:
+SELECT * FROM dba_obj_audit_opts;
+
+6) Lancez les requêtes et visualisez les entrées générées:
+SELECT a FROM table1;
+SELECT bb FROM table1; -- Cette requête générera une entrée car la colonne "bb" n'existe pas
+SELECT b FROM table2;
+INSERT INTO table1 VALUES (1);
+SELECT b FROM table2;
+SELECT a FROM table1;
+
+7) Auditer toutes les modifications de structures apportées aux objets qui vont être créés:
+AUDIT ALTER, DROP, TRUNCATE ON SCHEMA BY TD41 BY ACCESS;
+
+7)Enlevez l'audit de select et de suppression de la table1 et vérifiez les options:
+NOAUDIT SELECT, DELETE ON table1 BY TD41;
+SELECT * FROM dba_obj_audit_opts WHERE obj_name = 'TABLE1' AND owner = 'TD41';
+
+
+
+
+
+
+

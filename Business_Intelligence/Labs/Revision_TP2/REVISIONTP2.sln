@@ -1,0 +1,17 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "REVISIONTP2", "REVISIONTP2\REVISIONTP2.dtproj", "{074CF6CD-0308-49B1-8FE5-FEB64FC0CA3C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{074CF6CD-0308-49B1-8FE5-FEB64FC0CA3C}.Development|Default.ActiveCfg = Development
+		{074CF6CD-0308-49B1-8FE5-FEB64FC0CA3C}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

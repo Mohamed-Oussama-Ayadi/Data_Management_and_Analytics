@@ -1,0 +1,49 @@
+10 clients ( I: Oui= 4 Non=6)
+
+IG (avant séparation)= 1-[(4/10)^2+(6/10)^2] = 
+
+****************************
+Indice varibale Age
+J: jeune [18;35]   A: Agé [36 et plus]
+
+2 valeurs A (J: 4  'Oui: 2 Non: 2'
+             A: 6  'Oui: 2 Non: 4')
+IG (A= J)= 1-[(2/4)^2+(2/4)^2]=
+IG (A= A)= 1-[(2/6)^2+(4/6)^2]=
+
+Indice Age
+IGa (avant séparation)= 1-[IG(J)+IG(A)]=
+****************************
+
+Indice variable Sexe
+H: homme        F : femme
+
+2 valeurs S (H: 6 'Oui: 4 Non: 2'
+             F: 4 'Oui: 0 Non: 4')
+
+IG (S= H)= 1-[(4/6)^2+(2/6)^2]
+IG (S= F)= 1-[(4/4)^2+(0/4)^2]
+
+Indice Sexe
+IGs (avant séparation)= 1-[IG(H)+IG(F)]=
+****************************
+
+Indice variable Propriétaire 
+N: Non          O: Oui
+
+2 valeurs de P (Non: 7 'Oui: 3 Non: 4'
+                Oui: 3 'Oui: 3 Non: 0')
+
+IG (P= N)= 1-[(3/7)^2+(4/7)^2]
+IG (P= O)= 1-[(3/3)^2+(0/3)^2]
+
+Indice Propriétaire 
+IGp (avant séparation)= 1-[IG(O)+IG(N)]= 
+
+
+
+
+
+
+
+

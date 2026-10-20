@@ -1,0 +1,17 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "Revision_RH_SSIS", "Revision_RH_SSIS\Revision_RH_SSIS.dtproj", "{30D88DDA-5CDA-4DD8-B52E-D549F3026CDE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{30D88DDA-5CDA-4DD8-B52E-D549F3026CDE}.Development|Default.ActiveCfg = Development
+		{30D88DDA-5CDA-4DD8-B52E-D549F3026CDE}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

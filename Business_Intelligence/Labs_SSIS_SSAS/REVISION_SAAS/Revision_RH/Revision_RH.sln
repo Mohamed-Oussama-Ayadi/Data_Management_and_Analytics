@@ -1,0 +1,18 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "Revision_RH", "Revision_RH\Revision_RH.dwproj", "{D50E1CA8-BE15-4AD8-8571-17CD1C26057A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D50E1CA8-BE15-4AD8-8571-17CD1C26057A}.Development|Default.ActiveCfg = Development
+		{D50E1CA8-BE15-4AD8-8571-17CD1C26057A}.Development|Default.Build.0 = Development
+		{D50E1CA8-BE15-4AD8-8571-17CD1C26057A}.Development|Default.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

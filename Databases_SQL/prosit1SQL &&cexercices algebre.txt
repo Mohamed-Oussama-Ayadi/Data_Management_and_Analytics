@@ -1,0 +1,25 @@
+Partie 3:
+1) 
+Resultat=PROJECTION (DEALS,NOM_CATEG);
+2)
+Resultat=Selection(DEALS,PERIODE_V='>2');
+3)
+N= INTERSECTION (MEMBRES,ACHATS);
+No=projection(N,Nom);
+
+D=Selection(ACHATS,DATE_ACHAT='12/10');
+Resultat=PROJECTION(Achat,No, INTITULE,D)
+
+
+Exercices Algèbres ...
+
+Q5:
+R=PROJECTION(film,Realisateur)
+Re=PROJECTION(acteurs, acteur)
+Res=INTERSECTION(R,Re)
+
+Q6:
+ Resultat=DIFFERNCE(Res ,Re)
+Q7:
+Resultat=DIFFERNCE(Res ,R)
+Q8:

@@ -1,0 +1,36 @@
+INSERT INTO members VALUES ('hello2017', 'H17test', 'gharbi', 'salma');
+INSERT INTO members VALUES ('Ahmed1617', 'A132bc', 'ben chabene', 'ali');
+INSERT INTO members VALUES ('Daddou123', 'B098tt', 'ben mahmoud', 'taoufik');
+
+INSERT INTO prestataires_services( nom_prest,num_adresse,rue_adresse,ville,CP,tel,email,page_fb) VALUES ('Square Optical L Aouina', 2, 'residence mesk jinen ain zaghoun', 'Ariena',2036,71100001,'Square.optical@hotmail.tn','http://www.facebook.com/
+
+Square-optical-
+396558407144821/?fref=ts');
+
+ALTER TABLE prestataires_services modify  (rue_adresse varchar2(100));
+ALTER TABLE prestataires_services modify  (page_fb varchar2(100));
+
+INSERT INTO prestataires_services( nom_prest,num_adresse,rue_adresse,ville,CP,tel,email,page_fb) VALUES ('Le Parador la
+Goulette', 9, 'Immeuble Labrise Tour', 'Tunis',2060,71893425,'Parador.Goulette@gmail.com','http://www.facebook.com/pages/Parador-La-Goulette-Restaurant/725375497514325?fref=ts');
+
+INSERT INTO prestataires_services( nom_prest,num_adresse,rue_adresse,ville,CP,tel,email,page_fb) VALUES ('Forever
+Beauty', 2, 'rue Taher el Memmi 1 er étage', 'Tunis',2091,71234098,'Forever.beauty@Hotmail.com','http://www.facebook.com/foreverbeautycenter/?fref=ts');
+
+INSERT INTO categories (nom_categorie,descriptionC) values('Restaurant et café','Deals relatifs aux restaurants et cafés et
+salons de thé');
+ALTER TABLE categories modify  (descriptionC varchar2(100));
+
+INSERT INTO categories (nom_categorie,descriptionC) values('Beauté','Deals relatifs aux salons de coiffure et SPA');
+INSERT INTO categories (nom_categorie,descriptionC) values('Life style et accessoires','Deals relatifs aux accessoires bijoux
+lunettes montres ...');
+ALTER TABLE categories modify  ( nom_categorie varchar2(100));
+
+INSERT INTO deals (intitule,description_D, prix_i, reduction ,date_d, periode_v, noteD, expire, nom_categ,nom_per) values('Square
+Optical L Aouina : Un bon d achat de valeur de 250 DT','L offre comprend:- Un bon d achat de valeur de 250 DT - 30% de réduction sur tout achat des lentilles de couleur',250,60, to_date('12/10/2016 9','dd/mm/yyyy 
+
+hh'),5 ,'','Non','Beauté', 'Square Optical L Aouina');
+
+ALTER TABLE deals  modify  ( intitule varchar2(100));
+ALTER TABLE deals  modify  ( description_D varchar2(500));
+ALTER TABLE deals  modify  ( nom_per varchar2(100));
+
